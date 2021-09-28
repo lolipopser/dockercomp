@@ -1,5 +1,5 @@
 FROM alpine
-RUN wget -o /tmp/tomcat.tar.gz https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz
+RUN wget -O /tmp/tomcat.tar.gz https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz
 RUN apk add tar
 WORKDIR /tmp
 RUN ls -la
