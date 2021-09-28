@@ -9,6 +9,8 @@ services:
         target: /var/boxfuse_src/boxfuse-sample-java-war-hello/target
   web:
     build: ./web
+    environment:
+      - =Development/Docker
     volumes:
       - type: volume
         source: war
