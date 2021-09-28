@@ -1,5 +1,6 @@
 FROM alpine
 RUN wget -o /tmp/tomcat.tar.gz https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz
+RUN apk add tar
 WORKDIR /tmp
 RUN  tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.53 /usr/local/tomcat
