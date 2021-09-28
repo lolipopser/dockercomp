@@ -3,7 +3,7 @@ RUN wget -O /tmp/tomcat.tar.gz https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/
 RUN apk add tar
 WORKDIR /tmp
 RUN ls -la
-RUN  tar -xvfz tomcat.tar.gz
+RUN  tar -zxvf tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.53 /usr/local/tomcat
 EXPOSE 8080
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
