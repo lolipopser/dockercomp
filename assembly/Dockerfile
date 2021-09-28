@@ -7,4 +7,4 @@ WORKDIR /var/boxfuse_src
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /var/boxfuse_src/boxfuse-sample-java-war-hello
 RUN mvn package
-CMD ["ping","ya.ru"]
+CMD ["ls","-la"]
