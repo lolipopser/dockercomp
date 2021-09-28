@@ -1,0 +1,15 @@
+---
+version: "3"
+services:
+  assembly:
+    build: ./assembly
+    volumes:
+      - war: /var/boxfuse_src/boxfuse-sample-java-war-hello/target/
+  web:
+    build: ./web
+    volumes:
+      - war: /usr/local/tomcat/webapps
+    ports:
+      - "7070:8080"
+volumes:
+  war:
