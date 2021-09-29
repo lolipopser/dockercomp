@@ -6,7 +6,7 @@ services:
     volumes:
       - type: volume
         source: war
-        target: /tmp/war
+        target: /var/boxfuse_src/boxfuse-sample-java-war-hello/target
     depends_on:
       - web
   web:
