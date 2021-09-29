@@ -2,7 +2,7 @@
 
 #RUN apk add openjdk11
 FROM openjdk:8u302-jre-slim-bullseye
-RUN apl add wget
+RUN apk add wget
 WORKDIR /tmp
 RUN wget -O /tmp/tomcat.tar.gz https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz
 RUN  tar -zxvf tomcat.tar.gz
