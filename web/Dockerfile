@@ -3,23 +3,23 @@
 #RUN apk add openjdk8
 
 
-FROM alpine:latest as build
-WORKDIR /opt/jdk
-ADD https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz /opt/jdk
-RUN ls -la
 
-RUN tar -xzvf openjdk-17_linux-x64_bin.tar.gz
-RUN ls -la
-WORKDIR /opt/jdk/jdk-17/bin
-RUN ls -la
-RUN ["jlink"]
+#FROM alpine:latest as build
+#WORKDIR /opt/jdk
+#ADD https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz /opt/jdk
+#RUN ls -la
+
+#RUN tar -xzvf openjdk-17_linux-x64_bin.tar.gz
+#RUN ls -la
+#WORKDIR /opt/jdk/jdk-17/bin
+#RUN ls -la
+#RUN ["jlink"]
+
+
 
 
 FROM alpine:latest
-COPY --from=build /jlinked /opt/jdk/
-
-
-
+#COPY --from=build /jlinked /opt/jdk/
 
 WORKDIR /tmp
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz /tmp
