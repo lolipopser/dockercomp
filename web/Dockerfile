@@ -20,7 +20,7 @@
 
 FROM alpine:latest
 #COPY --from=build /jlinked /opt/jdk/
-
+RUN apk add openjdk8
 WORKDIR /tmp
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.53/bin/apache-tomcat-9.0.53.tar.gz /tmp
 RUN  tar -zxvf apache-tomcat-9.0.53.tar.gz
