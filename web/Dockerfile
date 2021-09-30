@@ -12,10 +12,7 @@ RUN tar -xzvf openjdk-17_linux-x64_bin.tar.gz
 RUN ls -la
 WORKDIR /opt/jdk/jdk-17/bin
 RUN ls -la
-RUN ["jlink", "--compress=2", \
-     "--module-path", "/opt/jdk/jdk-17/jmods/", \
-     "--add-modules", "java.base", \
-     "--output", "/jlinked"]
+RUN ["jlink"]
 
 
 FROM alpine:latest
